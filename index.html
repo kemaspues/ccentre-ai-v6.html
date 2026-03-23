@@ -448,6 +448,136 @@ footer{border-top:1px solid var(--b);background:var(--bg);padding:68px 56px 32px
   .how-steps .hstep{grid-template-columns:40px 1fr;gap:20px}
   .hstep-visual{grid-column:2}
 }
+
+/* ─── LIGHT MODE ─── */
+html.light {
+  --g:#1a9e50;--gd:#147a3d;
+  --gdim:rgba(26,158,80,.10);--gborder:rgba(26,158,80,.22);
+  --bg:#f5f7f5;--bg2:#edf2ed;
+  --s:#ffffff;--s2:#f0f5f0;--s3:#e8f0e8;
+  --t:#0d1a0f;--t2:#3d6645;--t3:#7a9e80;
+  --b:rgba(0,0,0,.07);--b2:rgba(0,0,0,.12);
+}
+
+/* NAV in light */
+html.light nav{
+  background:rgba(245,247,245,.88);
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+html.light .ncta{background:var(--g);color:#fff}
+html.light .ncta:hover{background:var(--gd)}
+
+/* Logo text in light */
+html.light .logo-wrap text[fill="#ffffff"]{fill:#0d1a0f !important}
+html.light .logo-wrap text[fill="#dff0e1"]{fill:#0d1a0f !important}
+
+/* Hero in light */
+html.light .hero{background:var(--bg)}
+html.light #flickerCanvas{opacity:.12}
+html.light .hero-glow{background:radial-gradient(ellipse,rgba(26,158,80,.10) 0%,transparent 65%)}
+html.light .ripple{border-color:rgba(26,158,80,.10)}
+html.light .hero h1{color:var(--t)}
+html.light .hero-sub{color:var(--t2)}
+html.light .badge{background:rgba(26,158,80,.08);border-color:rgba(26,158,80,.2);color:var(--g)}
+
+/* Buttons in light */
+html.light .bg2{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.12);color:var(--t)}
+html.light .bg2:hover{border-color:var(--gborder);color:var(--g)}
+html.light .play{background:rgba(0,0,0,.1)}
+html.light .play::after{border-left-color:var(--t)}
+
+/* Beam visual in light */
+html.light .beam-center{
+  background:radial-gradient(circle,rgba(26,158,80,.06) 0%,var(--s) 65%);
+  border-color:var(--gborder);box-shadow:0 0 40px rgba(26,158,80,.08);
+}
+html.light .beam-ring{border-color:rgba(26,158,80,.08)}
+html.light .bchip{background:var(--s);border-color:var(--b)}
+
+/* Stats band in light */
+html.light .sband{background:var(--b);border-color:var(--b)}
+html.light .sc{background:var(--s)}
+html.light .sc:hover{background:var(--s2)}
+html.light .sl{color:var(--t3)}
+
+/* Logos in light */
+html.light .logos{background:var(--bg2);border-color:var(--b)}
+html.light .lpill{border-color:var(--b);color:var(--t3)}
+html.light .lpill:hover{border-color:var(--gborder);color:var(--t2)}
+
+/* Features in light */
+html.light .feat-grid-v2{background:var(--b);border-color:var(--b)}
+html.light .fv2-card{background:var(--s)}
+html.light .fv2-card:hover{background:var(--s2)}
+html.light .fv2-ico{background:linear-gradient(135deg,rgba(26,158,80,.08),rgba(26,158,80,.02))}
+
+/* How steps in light */
+html.light .how-bg{background:var(--bg2)}
+html.light .hstep-screen{background:var(--s);border-color:var(--b2);box-shadow:0 8px 32px rgba(0,0,0,.10)}
+html.light .hscreen-bar{background:var(--bg2);border-color:var(--b)}
+html.light .hscreen-msg{background:var(--bg2);border-color:var(--b)}
+html.light .hstep-chip{background:var(--s2);border-color:var(--b2);color:var(--t2)}
+html.light .hscreen-num{color:var(--t)}
+html.light .hss-n{color:var(--t)}
+
+/* Pricing in light */
+html.light .pcard{background:var(--s);border-color:var(--b)}
+html.light .pcard.hot{background:linear-gradient(160deg,#e8f5ee 0%,#f0faf4 100%);border-color:rgba(26,158,80,.35);box-shadow:0 0 40px rgba(26,158,80,.06)}
+html.light .pbtn-o{border-color:var(--b2);color:var(--t)}
+html.light .pbtn-o:hover{border-color:var(--gborder);color:var(--g)}
+
+/* Testimonials in light */
+html.light .tcard{background:var(--s);border-color:var(--b)}
+html.light .tcard:hover{border-color:var(--gborder)}
+html.light .tq{color:var(--t)}
+html.light .tmetric-wrap{background:rgba(26,158,80,.05);border-color:var(--gborder)}
+
+/* Apple infographic in light */
+html.light .atile-dark{background:var(--s);border-color:var(--b)}
+html.light .atile-surface{background:var(--s2);border-color:var(--b)}
+html.light .atile-green-dim{background:rgba(26,158,80,.07);border-color:var(--gborder)}
+html.light .atile-big-light{color:var(--t)}
+html.light .atile-sub{color:var(--t2) !important}
+html.light .alang{background:var(--s);border-color:var(--b2)}
+html.light .abar-wrap{background:var(--b2)}
+
+/* Calendar in light */
+html.light .cal-box{background:var(--s);border-color:var(--b2)}
+html.light .cal-header{border-color:var(--b)}
+html.light .cal-day{color:var(--t2)}
+html.light .cal-day.cal-day-available{color:var(--t)}
+html.light .cal-day:hover:not(.cal-day-empty):not(.cal-day-past){background:var(--s2);border-color:var(--gborder)}
+html.light .cal-nav-btn{border-color:var(--b);color:var(--t2)}
+html.light .cal-slot{background:var(--s);border-color:var(--b2);color:var(--t)}
+html.light .cal-input{background:var(--s2);border-color:var(--b2);color:var(--t)}
+html.light .cal-slots-title{color:var(--t2)}
+
+/* Footer in light */
+html.light footer{background:var(--bg);border-color:var(--b)}
+html.light .fbot{border-color:var(--b)}
+html.light .fslink{border-color:var(--b)}
+html.light .fcol a{color:var(--t3)}
+
+/* Final CTA in light */
+html.light .fcta{background:var(--bg)}
+html.light #ctaCanvas{opacity:.08}
+html.light .fcta-glow{background:radial-gradient(ellipse,rgba(26,158,80,.08) 0%,transparent 65%)}
+
+/* Toggle button */
+.theme-toggle{
+  width:38px;height:22px;border-radius:11px;
+  background:var(--s2);border:1px solid var(--b2);
+  cursor:pointer;position:relative;transition:all .3s;
+  flex-shrink:0;display:flex;align-items:center;padding:2px;
+}
+.theme-toggle-thumb{
+  width:16px;height:16px;border-radius:50%;
+  background:var(--g);transition:transform .3s;
+  display:flex;align-items:center;justify-content:center;
+  font-size:9px;
+}
+html.light .theme-toggle-thumb{transform:translateX(16px)}
+.theme-toggle-icon{font-size:10px;line-height:1}
 </style>
 </head>
 <body>
@@ -478,7 +608,14 @@ footer{border-top:1px solid var(--b);background:var(--bg);padding:68px 56px 32px
     <li><a href="#pricing">Precios</a></li>
     <li><a href="#contact">Contacto</a></li>
   </ul>
-  <a href="#" class="ncta">Empezar gratis</a>
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="theme-toggle" id="themeToggle" title="Cambiar tema" onclick="toggleTheme()">
+      <div class="theme-toggle-thumb">
+        <span class="theme-toggle-icon" id="themeIcon">🌙</span>
+      </div>
+    </button>
+    <a href="#" class="ncta">Empezar gratis</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -492,7 +629,7 @@ footer{border-top:1px solid var(--b);background:var(--bg);padding:68px 56px 32px
   </div>
 
   <div class="badge"><span class="bpulse"></span>IA Voice Automation 24/7</div>
-  <h1>Su negocio merece<br>una voz que <em>nunca<br>descansa.</em></h1>
+  <h1 style="font-size:clamp(40px,5.2vw,68px)">Su negocio merece una voz<br>que <em style="white-space:nowrap">nunca descansa.</em></h1>
   <p class="hero-sub">Automatice el 100% de sus llamadas con inteligencia artificial. Disponible las 24 horas, los 7 días. Sin operadores. Sin errores.</p>
 
   <div class="ctas">
@@ -962,6 +1099,31 @@ footer{border-top:1px solid var(--b);background:var(--bg);padding:68px 56px 32px
 </footer>
 
 <script>
+
+// ── THEME TOGGLE ──
+function toggleTheme(){
+  const html = document.documentElement;
+  const icon = document.getElementById('themeIcon');
+  if(html.classList.contains('light')){
+    html.classList.remove('light');
+    icon.textContent = '🌙';
+    localStorage.setItem('ccentre-theme','dark');
+  } else {
+    html.classList.add('light');
+    icon.textContent = '☀️';
+    localStorage.setItem('ccentre-theme','light');
+  }
+}
+// Init from saved preference
+(function(){
+  const saved = localStorage.getItem('ccentre-theme');
+  if(saved === 'light'){
+    document.documentElement.classList.add('light');
+    const icon = document.getElementById('themeIcon');
+    if(icon) icon.textContent = '☀️';
+  }
+})();
+
 // ── FLICKERING GRID ──
 (function(){
   const c=document.getElementById('flickerCanvas'),ctx=c.getContext('2d');
