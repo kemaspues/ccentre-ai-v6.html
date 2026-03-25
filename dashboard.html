@@ -428,8 +428,18 @@ document.getElementById('loginPass').addEventListener('keydown', function(e){ if
 <!-- ═══════════ SIDEBAR ═══════════ -->
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-logo">
-    <div class="logo-c">C</div>
-    <div class="logo-text">CENTRE<span>AI</span></div>
+    <svg viewBox="0 0 172 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:32px;width:auto">
+      <text x="0" y="30" font-family="Bricolage Grotesque,sans-serif" font-size="36" font-weight="900" fill="#25D366" letter-spacing="-2">C</text>
+      <rect x="5" y="17" width="2.2" height="6" rx="1.1" fill="#fff" opacity=".55"/>
+      <rect x="9" y="13" width="2.2" height="14" rx="1.1" fill="#fff" opacity=".9"/>
+      <rect x="13" y="15" width="2.2" height="10" rx="1.1" fill="#fff" opacity=".75"/>
+      <rect x="17" y="10" width="2.2" height="20" rx="1.1" fill="#fff"/>
+      <rect x="21" y="14" width="2.2" height="12" rx="1.1" fill="#fff" opacity=".8"/>
+      <rect x="25" y="17" width="2.2" height="6" rx="1.1" fill="#fff" opacity=".55"/>
+      <text x="33" y="30" font-family="Bricolage Grotesque,sans-serif" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="1.5">CENTRE</text>
+      <rect x="130" y="12" width="30" height="18" rx="5" fill="#25D366"/>
+      <text x="145" y="25" font-family="Bricolage Grotesque,sans-serif" font-size="12" font-weight="800" fill="#000" text-anchor="middle">AI</text>
+    </svg>
   </div>
   <nav class="sidebar-nav">
     <div class="nav-label">Principal</div>
@@ -464,11 +474,36 @@ document.getElementById('loginPass').addEventListener('keydown', function(e){ if
     <div class="plan-name">Business</div>
     <div class="plan-calls">3,847 / 5,000 llamadas</div>
   </div>
+  <!-- Boutons retour + déconnexion -->
+  <div style="padding:12px 12px 0">
+    <a href="index.html" style="
+      display:flex;align-items:center;gap:8px;padding:10px 14px;
+      border-radius:var(--radius-sm);color:var(--text-secondary);
+      font-size:.88rem;font-weight:500;text-decoration:none;
+      background:var(--glass);border:1px solid var(--border);
+      transition:var(--transition);margin-bottom:8px;
+    " onmouseover="this.style.borderColor='rgba(37,211,102,.3)';this.style.color='var(--text-primary)'" 
+       onmouseout="this.style.borderColor='';this.style.color=''">
+      <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;flex-shrink:0"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Volver al sitio web
+    </a>
+    <button onclick="doLogout()" style="
+      display:flex;align-items:center;gap:8px;padding:10px 14px;width:100%;
+      border-radius:var(--radius-sm);color:var(--red);
+      font-size:.88rem;font-weight:500;
+      background:rgba(255,77,106,.06);border:1px solid rgba(255,77,106,.15);
+      transition:var(--transition);cursor:pointer;font-family:var(--font-body);
+    " onmouseover="this.style.background='rgba(255,77,106,.12)'" 
+       onmouseout="this.style.background='rgba(255,77,106,.06)'">
+      <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;flex-shrink:0"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+      Cerrar sesión
+    </button>
+  </div>
   <div class="sidebar-user">
     <div class="user-avatar">RP</div>
     <div class="user-info">
       <div class="user-name">RetailPro Paraguay</div>
-      <div class="user-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="254441484c4b65574051444c4955574a0b464a480b555c">[email&#160;protected]</a></div>
+      <div class="user-email">hola@retailpro.com.py</div>
     </div>
   </div>
 </aside>
@@ -485,8 +520,14 @@ document.getElementById('loginPass').addEventListener('keydown', function(e){ if
     </div>
     <div class="top-bar-right">
       <div class="top-badge"><div class="pulse"></div> Agente activo</div>
-      <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
-        <svg id="themeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <!-- Theme toggle propre -->
+      <button id="themeToggleBtn" onclick="toggleTheme()" title="Cambiar tema" style="
+        width:40px;height:40px;border-radius:var(--radius-sm);
+        background:var(--glass);border:1px solid var(--border);
+        display:flex;align-items:center;justify-content:center;
+        cursor:pointer;transition:var(--transition);flex-shrink:0;
+      " onmouseover="this.style.borderColor='rgba(37,211,102,.3)'" onmouseout="this.style.borderColor=''">
+        <span id="themeIconLabel" style="font-size:16px">🌙</span>
       </button>
       <button class="notif-btn"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="dot"></div></button>
     </div>
@@ -924,3 +965,48 @@ function initReportCharts(){
       y:{min:3.5,max:5,grid:{color:grid},ticks:{color:txt,font:{family:'Geist'},callback:v=>v.toFixed(1)}}
     }}
   });
+
+<script>
+// ── THEME TOGGLE ──
+var isDark = true;
+function toggleTheme(){
+  isDark = !isDark;
+  var html = document.documentElement;
+  var icon = document.getElementById('themeIconLabel');
+  if(isDark){
+    html.classList.remove('light');
+    if(icon) icon.textContent = '🌙';
+    localStorage.setItem('dash-theme','dark');
+  } else {
+    html.classList.add('light');
+    if(icon) icon.textContent = '☀️';
+    localStorage.setItem('dash-theme','light');
+  }
+  // Réinitialiser les graphiques avec les bonnes couleurs
+  setTimeout(function(){
+    if(typeof initResumenChart === 'function') initResumenChart();
+    if(typeof initReportCharts === 'function') initReportCharts();
+  }, 50);
+}
+// Init theme depuis localStorage
+(function(){
+  var saved = localStorage.getItem('dash-theme');
+  if(saved === 'light'){
+    isDark = false;
+    document.documentElement.classList.add('light');
+    var icon = document.getElementById('themeIconLabel');
+    if(icon) icon.textContent = '☀️';
+  }
+})();
+
+// ── LOGOUT ──
+function doLogout(){
+  // Effacer session et retourner sur la landing
+  localStorage.removeItem('dash-theme');
+  // Afficher confirmation rapide
+  var confirmed = confirm('¿Cerrar sesión y volver al sitio web?');
+  if(confirmed){
+    window.location.href = 'index.html';
+  }
+}
+</script>
