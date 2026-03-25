@@ -873,9 +873,14 @@ function initReportCharts(){
   });
 
 // ═══════════ INIT AU CHARGEMENT ═══════════
-window.addEventListener('load', function(){
+document.addEventListener('DOMContentLoaded', function(){
   renderFeed();
-  initResumenChart();
+  setTimeout(function(){ initResumenChart(); }, 150);
+  document.querySelectorAll('.nav-item[data-page]').forEach(function(item){
+    item.addEventListener('click', function(){
+      navigate(this.getAttribute('data-page'), this);
+    });
+  });
 });
 
 </script>
@@ -887,8 +892,9 @@ document.getElementById('loginBtn').addEventListener('click',function(){
   if(!e||!p){err.style.display='block';return;}
   err.style.display='none';
   var pg=document.getElementById('loginPage');
+  pg.style.pointerEvents='none';
   pg.style.transition='opacity .4s';pg.style.opacity='0';
-  setTimeout(function(){pg.style.display='none';},400);
+  setTimeout(function(){pg.style.display='none';pg.style.pointerEvents='none';},400);
 });
 document.getElementById('loginEmail').addEventListener('keydown',function(e){if(e.key==='Enter')document.getElementById('loginBtn').click();});
 document.getElementById('loginPass').addEventListener('keydown',function(e){if(e.key==='Enter')document.getElementById('loginBtn').click();});
