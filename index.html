@@ -27,8 +27,24 @@ html.light{
 }
 html.light body{background:var(--bg);color:var(--t)}
 html.light nav{background:rgba(244,247,245,.92);border-bottom:1px solid var(--b)}
+html.light .atile-dark{background:#ffffff;border:1px solid rgba(0,0,0,.08)}
+html.light .atile-surface{background:#f8faf9;border:1px solid rgba(0,0,0,.08)}
+html.light .atile-green-dim{background:rgba(26,171,82,.06);border:1px solid rgba(26,171,82,.2)}
+html.light .atile-dark .atile-label,html.light .atile-surface .atile-label,html.light .atile-green-dim .atile-label{color:#5a7a62}
+html.light .atile-big{color:#0d1a0f}
+html.light .atile-big-light{color:#0d1a0f}
+html.light .atile-big-accent{color:var(--g)}
+html.light .pcard{background:#ffffff;border:1px solid rgba(0,0,0,.08)}
+html.light .pcard.hot{background:linear-gradient(160deg,#25D366 0%,#1aab52 100%);border-color:#25D366;box-shadow:0 8px 40px rgba(37,211,102,.3);color:#ffffff}
+html.light .pcard.hot *{color:#ffffff}
+html.light .pcard.hot .hotbadge{background:var(--g);color:#fff}
+html.light .pcard.hot .pbtn.pbtn-g{background:var(--g);color:#fff}
+html.light .pname{color:var(--t)}
+html.light .pprice{color:var(--t)}
+html.light .pdesc{color:var(--t2)}
 html.light .he{background:var(--bg)}
 html.light .fcta canvas{opacity:.08}
+
 
 html{scroll-behavior:smooth}
 body{font-family:'Geist',sans-serif;background:var(--bg);color:var(--t);overflow-x:hidden}
@@ -720,14 +736,10 @@ footer{border-top:1px solid var(--b);background:var(--bg);padding:68px 56px 32px
   <h2 style="position:relative;z-index:1">¿Listo para automatizar<br>tu centro de llamadas?</h2>
   <p style="position:relative;z-index:1">Reserva una llamada de 30 minutos con nuestro equipo. Te mostramos todo en vivo.</p>
 
-  <div style="margin-top:40px;position:relative;z-index:1">
-    <a href="#" class="bp">O empieza gratis ahora →</a>
-  </div>
-
   <!-- Calendly -->
   <div style="width:100%;max-width:900px;margin:32px auto 0;border-radius:20px;overflow:hidden;border:1px solid rgba(37,211,102,.2);box-shadow:0 24px 64px rgba(0,0,0,.4)">
     <div class="calendly-inline-widget"
-      data-url="https://calendly.com/ccentrepy/30min?locale=es&hide_event_type_details=1&hide_gdpr_banner=1&background_color=0c1510&text_color=dff0e1&primary_color=25D366"
+      id="calendlyWidget" data-url="https://calendly.com/ccentrepy/30min?locale=es&hide_event_type_details=1&hide_gdpr_banner=1&background_color=0c1510&text_color=dff0e1&primary_color=25D366"
       style="min-width:320px;height:700px;"></div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </div>
@@ -898,7 +910,7 @@ footer{border-top:1px solid var(--b);background:var(--bg);padding:68px 56px 32px
     if(!name||!email){alert('Por favor completa tu nombre y email.');return;}
 
 <script>
-var _dark = true;
+window._dark = true;
 (function(){
   if(localStorage.getItem('ccentre-theme')==='light'){
     _dark=false;
@@ -906,10 +918,10 @@ var _dark = true;
   }
 })();
 function toggleTheme(){
-  _dark=!_dark;
+  window._dark=!window._dark;
   var html=document.documentElement;
   var btn=document.getElementById('themeToggle');
-  if(_dark){
+  if(window._dark){
     html.classList.remove('light');
     if(btn){
       var moon=document.getElementById('iconMoon');
@@ -930,16 +942,68 @@ function toggleTheme(){
   }
 }
 document.addEventListener('DOMContentLoaded',function(){
-  var btn=document.getElementById('themeToggle');
   var saved=localStorage.getItem('ccentre-theme');
-  if(saved==='light' && btn){
+  if(saved==='light'){
     var moon=document.getElementById('iconMoon');
     var sun=document.getElementById('iconSun');
     if(moon) moon.style.display='none';
     if(sun) sun.style.display='block';
+    document.documentElement.classList.add('light');
+    _dark=false;
   }
-  if(btn) btn.addEventListener('click',function(e){e.stopPropagation();toggleTheme();});
 });
+</script>
+<script>
+(function(){
+  // État global
+  var dark = localStorage.getItem('t') !== 'l';
+
+  // Appliquer au chargement
+  if(!dark){
+    document.documentElement.classList.add('light');
+    showSun();
+  }
+
+  function showMoon(){
+    var m=document.getElementById('iconMoon');
+    var s=document.getElementById('iconSun');
+    if(m) m.style.display='block';
+    if(s) s.style.display='none';
+  }
+  function showSun(){
+    var m=document.getElementById('iconMoon');
+    var s=document.getElementById('iconSun');
+    if(m) m.style.display='none';
+    if(s) s.style.display='block';
+  }
+
+  function updateCalendly(){
+    var widget = document.getElementById('calendlyWidget');
+    if(!widget) return;
+    var url;
+    if(dark){
+      url = 'https://calendly.com/ccentrepy/30min?locale=es&hide_event_type_details=1&hide_gdpr_banner=1&background_color=0c1510&text_color=dff0e1&primary_color=25D366';
+    } else {
+      url = 'https://calendly.com/ccentrepy/30min?locale=es&hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff&text_color=0d1a0f&primary_color=1aab52';
+    }
+    widget.setAttribute('data-url', url);
+    widget.innerHTML = '<iframe src="' + url + '" width="100%" height="700" frameborder="0" style="border:none"></iframe>';
+  }
+
+  window.toggleTheme = function(){
+    dark = !dark;
+    if(dark){
+      document.documentElement.classList.remove('light');
+      localStorage.setItem('t','d');
+      showMoon();
+    } else {
+      document.documentElement.classList.add('light');
+      localStorage.setItem('t','l');
+      showSun();
+    }
+    updateCalendly();
+  };
+})();
 </script>
 </body>
 </html>
