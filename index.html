@@ -578,6 +578,19 @@ html.light .fcta-glow{background:radial-gradient(ellipse,rgba(26,158,80,.08) 0%,
 }
 html.light .theme-toggle-thumb{transform:translateX(16px)}
 .theme-toggle-icon{font-size:10px;line-height:1}
+
+/* ─── CALENDLY WIDGET ─── */
+.calendly-wrap{
+  width:100%;max-width:900px;margin:0 auto;
+  position:relative;z-index:1;
+  border-radius:20px;overflow:hidden;
+  border:1px solid var(--gborder);
+  box-shadow:0 24px 64px rgba(0,0,0,.4);
+}
+html.light .calendly-wrap{
+  border-color:rgba(26,158,80,.2);
+  box-shadow:0 12px 40px rgba(0,0,0,.12);
+}
 </style>
 </head>
 <body>
@@ -603,8 +616,8 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
     </svg>
   </a>
   <ul>
-    <li><a href="#features">Características</a></li>
-    <li><a href="#how">¿Cómo funciona?</a></li>
+    <li><a href="#features">Servicios</a></li>
+    <li><a href="#how">Proceso</a></li>
     <li><a href="#pricing">Precios</a></li>
     <li><a href="#contact">Contacto</a></li>
   </ul>
@@ -614,7 +627,7 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
         <span class="theme-toggle-icon" id="themeIcon">🌙</span>
       </div>
     </button>
-    <a href="#" class="ncta">Empezar gratis</a>
+    <a href="#contact" class="ncta">Agendar demo</a>
   </div>
 </nav>
 
@@ -629,12 +642,12 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
   </div>
 
   <div class="badge"><span class="bpulse"></span>IA Voice Automation 24/7</div>
-  <h1 style="font-size:clamp(40px,5.2vw,68px)">Su negocio merece una voz<br>que <em style="white-space:nowrap">nunca descansa.</em></h1>
-  <p class="hero-sub">Automatice el 100% de sus llamadas con inteligencia artificial. Disponible las 24 horas, los 7 días. Sin operadores. Sin errores.</p>
+  <h1 style="font-size:clamp(40px,5.2vw,68px)">Tu empresa,<br><em style="white-space:nowrap">siempre disponible.</em></h1>
+  <p class="hero-sub">Implementamos agentes de voz con inteligencia artificial que atienden, califican y convierten a tus clientes — las 24 horas, sin intervención humana.</p>
 
   <div class="ctas">
-    <a href="#" class="bp">Probar gratis ahora</a>
-    <a href="#" class="bg2"><span class="play"></span>Ver demo en vivo</a>
+    <a href="#contact" class="bp">Agendar una demo</a>
+    <a href="#features" class="bg2">Ver servicios →</a>
   </div>
 
   <div class="beam-visual">
@@ -665,11 +678,11 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
 
 <!-- LOGOS -->
 <div class="logos">
-  <div class="llabel">Empresas que confían en Ccentre AI</div>
+  <div class="llabel">Construido sobre la tecnología que impulsa a las empresas líderes del mundo</div>
   <div class="lrow">
-    <div class="lpill">TechCorp</div><div class="lpill">FinanzaPY</div>
-    <div class="lpill">MediSalud</div><div class="lpill">RetailPro</div>
-    <div class="lpill">AutoServ</div><div class="lpill">GlobalBank</div>
+    <div class="lpill">OpenAI</div><div class="lpill">ElevenLabs</div>
+    <div class="lpill">Vapi</div><div class="lpill">Twilio</div>
+    <div class="lpill">Google</div>
   </div>
 </div>
 
@@ -677,8 +690,8 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
 <section id="features">
   <div class="wrap sec">
     <div class="stag">Características</div>
-    <div class="sh">Todo lo que necesitas<br>para escalar</div>
-    <div class="sp">Un sistema inteligente que se adapta a tu negocio desde el primer día.</div>
+    <div class="sh">Todo lo que tu<br>negocio necesita</div>
+    <div class="sp">Diseñamos e implementamos agentes de voz personalizados. No vendemos software — entregamos resultados medibles.</div>
 
     <div class="feat-grid">
       <!-- card 1 — wide -->
@@ -745,7 +758,7 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
 <div id="how" class="how-bg">
   <div class="wrap sec">
     <div class="stag">¿Cómo funciona?</div>
-    <div class="sh">3 pasos para automatizar<br>tu centro de llamadas</div>
+    <div class="sh">En marcha en<br><em style="color:var(--g)">48 horas</em></div>
     <div class="how-steps">
       <!-- Step 1 -->
       <div class="hstep">
@@ -756,18 +769,18 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
           <div class="hstep-connector"></div>
         </div>
         <div class="hstep-content">
-          <div class="hstep-tag">Paso 1</div>
-          <div class="hstep-title">Conecte su número</div>
-          <div class="hstep-desc">Vincule su número existente o adquiera uno nuevo. Compatible con cualquier operadora de Paraguay y América Latina.</div>
-          <div class="hstep-chip"><span>📞</span> Cualquier operadora</div>
+          <div class="hstep-tag">Paso I</div>
+          <div class="hstep-title">Sesión de onboarding</div>
+          <div class="hstep-desc">30 minutos para entender tu negocio, tu cliente ideal, el tono de tu marca y los objetivos específicos que querés alcanzar.</div>
+          <div class="hstep-chip"><span>🎯</span> 30 minutos</div>
         </div>
         <div class="hstep-visual">
           <div class="hstep-screen">
             <div class="hscreen-bar"><span></span><span></span><span></span></div>
             <div class="hscreen-body">
-              <div class="hscreen-label">Número activo</div>
-              <div class="hscreen-num">+595 21 ··· ···</div>
-              <div class="hscreen-status"><span class="hstatus-dot"></span>Conectado</div>
+              <div class="hscreen-label">Sesión programada</div>
+              <div class="hscreen-num">30 min · Onboarding</div>
+              <div class="hscreen-status"><span class="hstatus-dot"></span>Confirmado</div>
             </div>
           </div>
         </div>
@@ -782,18 +795,18 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
           <div class="hstep-connector"></div>
         </div>
         <div class="hstep-content">
-          <div class="hstep-tag">Paso 2</div>
-          <div class="hstep-title">Configure su agente IA</div>
-          <div class="hstep-desc">Defina la personalidad, el tono y los objetivos de su agente con lenguaje natural. Sin código. Sin conocimientos técnicos.</div>
-          <div class="hstep-chip"><span>🤖</span> Sin programación</div>
+          <div class="hstep-tag">Paso II</div>
+          <div class="hstep-title">Entrenamiento del agente</div>
+          <div class="hstep-desc">Entrenamos al agente con toda la información de tu empresa. Si querés clonar una voz, nos mandás 2 minutos de audio y lo hacemos nosotros.</div>
+          <div class="hstep-chip"><span>🎙️</span> Voz clonada incluida</div>
         </div>
         <div class="hstep-visual">
           <div class="hstep-screen">
             <div class="hscreen-bar"><span></span><span></span><span></span></div>
             <div class="hscreen-body">
-              <div class="hscreen-label">Personalidad del agente</div>
-              <div class="hscreen-msg">"Responda de forma profesional y amable, ofrezca citas disponibles..."</div>
-              <div class="hscreen-btn">Guardar agente ✓</div>
+              <div class="hscreen-label">Entrenamiento IA</div>
+              <div class="hscreen-msg">"Agente entrenado con tu marca, voz clonada lista, scripts configurados..."</div>
+              <div class="hscreen-btn">Agente listo ✓</div>
             </div>
           </div>
         </div>
@@ -807,10 +820,10 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
           </div>
         </div>
         <div class="hstep-content">
-          <div class="hstep-tag">Paso 3</div>
-          <div class="hstep-title">Lance y escale</div>
-          <div class="hstep-desc">Su centro de llamadas está listo. Monitoree en tiempo real y escale sin límites con su negocio.</div>
-          <div class="hstep-chip"><span>🚀</span> Operativo el mismo día</div>
+          <div class="hstep-tag">Paso III</div>
+          <div class="hstep-title">Integración completa</div>
+          <div class="hstep-desc">Conectamos el agente a tu número de teléfono, tu calendario y tu CRM. Sin cambiar nada de tu infraestructura actual.</div>
+          <div class="hstep-chip"><span>🔗</span> Sin cambiar tu infraestructura</div>
         </div>
         <div class="hstep-visual">
           <div class="hstep-screen">
@@ -836,14 +849,14 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
 <section id="infographic" style="background:var(--bg);padding:108px 0">
   <div class="wrap">
     <div class="stag">Por qué Ccentre AI</div>
-    <div class="sh">Los números<br>hablan solos</div>
+    <div class="sh">Impacto<br>medible</div>
     <div class="apple-grid">
 
       <!-- Tile 1 — Large stat -->
       <div class="atile atile-green">
-        <div class="atile-label">Llamadas atendidas</div>
-        <div class="atile-big">100<span>%</span></div>
-        <div class="atile-sub">de sus llamadas, sin perder ninguna</div>
+        <div class="atile-label">Llamadas perdidas</div>
+        <div class="atile-big">0<span>%</span></div>
+        <div class="atile-sub">Cero llamadas perdidas, las 24 horas</div>
       </div>
 
       <!-- Tile 2 — Waveform visual -->
@@ -866,41 +879,41 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
       <!-- Tile 3 — Response time -->
       <div class="atile atile-dark">
         <div class="atile-label">Tiempo de respuesta</div>
-        <div class="atile-big-light">&lt;1<span style="font-size:.4em;color:var(--t2)">seg</span></div>
-        <div class="atile-sub">Más rápido que cualquier operador humano</div>
+        <div class="atile-big-light">5<span style="font-size:.4em;color:var(--g)">seg</span></div>
+        <div class="atile-sub">Respuesta inmediata, más rápido que cualquier operador</div>
       </div>
 
       <!-- Tile 4 — Cost reduction -->
       <div class="atile atile-dark">
-        <div class="atile-label">Reducción de costos</div>
-        <div class="atile-big-accent">−70<span>%</span></div>
-        <div class="atile-sub">Ahorro operativo desde el primer mes</div>
+        <div class="atile-label">Satisfacción del cliente</div>
+        <div class="atile-big-accent">+40<span>%</span></div>
+        <div class="atile-sub">Aumento promedio en satisfacción tras implementar Ccentre AI</div>
       </div>
 
       <!-- Tile 5 — Languages -->
       <div class="atile atile-surface atile-wide">
-        <div class="atile-label">Multiidioma</div>
+        <div class="atile-label">Industrias</div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0">
-          <span class="alang">🇪🇸 Español</span>
-          <span class="alang">🇺🇸 English</span>
-          <span class="alang">🇧🇷 Português</span>
-          <span class="alang">🇫🇷 Français</span>
+          <span class="alang">🏠 Inmobiliarias</span>
+          <span class="alang">🏥 Clínicas</span>
+          <span class="alang">📣 Agencias</span>
+          <span class="alang">🎓 Educación</span>
         </div>
-        <div class="atile-sub">Su agente habla el idioma de sus clientes</div>
+        <div class="atile-sub">Solución personalizada para cada industria</div>
       </div>
 
       <!-- Tile 6 — Setup time -->
       <div class="atile atile-surface">
-        <div class="atile-label">Configuración</div>
-        <div class="atile-big-light">5<span style="font-size:.35em;color:var(--g)"> min</span></div>
-        <div class="atile-sub">Operativo el mismo día, sin equipo técnico</div>
+        <div class="atile-label">Implementación</div>
+        <div class="atile-big-light">48<span style="font-size:.35em;color:var(--g)">h</span></div>
+        <div class="atile-sub">Tu agente en vivo en menos de 48 horas</div>
       </div>
 
       <!-- Tile 7 — Simultaneous calls -->
       <div class="atile atile-green-dim">
-        <div class="atile-label">Llamadas simultáneas</div>
-        <div class="atile-big-light">∞</div>
-        <div class="atile-sub">Sin límite de llamadas en paralelo</div>
+        <div class="atile-label">Disponibilidad</div>
+        <div class="atile-big-light">24<span style="font-size:.45em;color:var(--t2)">/7</span></div>
+        <div class="atile-sub">365 días al año, sin interrupciones</div>
       </div>
 
       <!-- Tile 8 — Satisfaction -->
@@ -1009,62 +1022,34 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
   </div>
 </div>
 
-<!-- FINAL CTA + CALENDAR -->
+<!-- FINAL CTA + CALENDLY -->
 <section class="fcta" id="contact">
   <canvas id="ctaCanvas"></canvas>
   <div class="fcta-vignette"></div>
   <div class="fcta-glow"></div>
-  <div class="stag" style="position:relative;z-index:1;margin-bottom:12px">Reserva una demo</div>
-  <h2 style="position:relative;z-index:1">¿Listo para automatizar<br>tu centro de llamadas?</h2>
-  <p style="position:relative;z-index:1">Reserve una llamada de 20 minutos con nuestro equipo. Le mostramos todo en vivo.</p>
 
-  <div class="cal-wrap">
-    <!-- Calendar UI -->
-    <div class="cal-box">
-      <div class="cal-header">
-        <div class="cal-meta">
-          <div class="cal-ico">📞</div>
-          <div>
-            <div class="cal-title">Demo Ccentre AI</div>
-            <div class="cal-sub">20 min · Videollamada gratuita</div>
-          </div>
-        </div>
-      </div>
-      <div class="cal-body">
-        <!-- Month nav -->
-        <div class="cal-month-nav">
-          <button class="cal-nav-btn" id="prevMonth">‹</button>
-          <span class="cal-month-label" id="monthLabel"></span>
-          <button class="cal-nav-btn" id="nextMonth">›</button>
-        </div>
-        <!-- Days grid -->
-        <div class="cal-days-header">
-          <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sa</span><span>Do</span>
-        </div>
-        <div class="cal-grid" id="calGrid"></div>
-      </div>
-    </div>
+  <div class="stag" style="position:relative;z-index:1;margin-bottom:12px">Contacto</div>
+  <h2 style="position:relative;z-index:1">Hablemos de<br>tu negocio</h2>
+  <p style="position:relative;z-index:1;margin-bottom:48px">Contanos tu empresa y tu desafío. Te contactamos en menos de 24 horas para mostrarte exactamente cómo Ccentre AI puede transformar tu atención al cliente.</p>
 
-    <!-- Time slots -->
-    <div class="cal-slots" id="calSlots">
-      <div class="cal-slots-title" id="slotsTitle">Selecciona un día</div>
-      <div class="cal-slots-grid" id="slotsGrid"></div>
-      <div class="cal-confirm" id="calConfirm" style="display:none">
-        <input type="text" class="cal-input" placeholder="Su nombre" id="bookName"/>
-        <input type="email" class="cal-input" placeholder="Email empresarial" id="bookEmail"/>
-        <input type="tel" class="cal-input" placeholder="WhatsApp / Teléfono" id="bookPhone"/>
-        <button class="cal-book-btn" id="bookBtn">Confirmar reserva →</button>
-      </div>
-      <div class="cal-success" id="calSuccess" style="display:none">
-        <div class="cal-success-ico">✓</div>
-        <div class="cal-success-title">¡Reserva confirmada!</div>
-        <div class="cal-success-sub">Le enviaremos los detalles por email.</div>
-      </div>
-    </div>
+  <!-- Calendly — deux iframes dark/light -->
+  <div class="calendly-wrap">
+    <iframe
+      id="cal-dark"
+      src="https://calendly.com/ccentrepy/30min?locale=es&lang=es&hide_event_type_details=1&hide_gdpr_banner=1&background_color=0c1510&text_color=dff0e1&primary_color=25D366"
+      width="100%" height="700" frameborder="0"
+      style="border-radius:16px;border:none;display:block">
+    </iframe>
+    <iframe
+      id="cal-light"
+      src="https://calendly.com/ccentrepy/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=f5f7f5&text_color=0d1a0f&primary_color=1a9e50"
+      width="100%" height="700" frameborder="0"
+      style="border-radius:16px;border:none;display:none">
+    </iframe>
   </div>
 
-  <div style="margin-top:40px;position:relative;z-index:1">
-    <a href="#" class="bp">O empiece gratis ahora →</a>
+  <div style="margin-top:48px;position:relative;z-index:1">
+    <a href="/cdn-cgi/l/email-protection#ec8483808dac8f8f8982989e89c28d85" class="bp">Escribinos a <span class="__cf_email__" data-cfemail="2d4542414c6d4e4e4843595f48034c44">[email&#160;protected]</span> →</a>
   </div>
 </section>
 
@@ -1098,7 +1083,7 @@ html.light .theme-toggle-thumb{transform:translateX(16px)}
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
 // ── THEME TOGGLE ──
 function toggleTheme(){
@@ -1122,6 +1107,28 @@ function toggleTheme(){
     const icon = document.getElementById('themeIcon');
     if(icon) icon.textContent = '☀️';
   }
+})();
+
+
+
+// ── CALENDLY IFRAME SWAP ──
+(function(){
+  function swapCal(){
+    const isLight = document.documentElement.classList.contains('light');
+    const dark  = document.getElementById('cal-dark');
+    const light = document.getElementById('cal-light');
+    if(!dark || !light) return;
+    dark.style.display  = isLight ? 'none'  : 'block';
+    light.style.display = isLight ? 'block' : 'none';
+  }
+  // Init au chargement
+  document.addEventListener('DOMContentLoaded', swapCal);
+  // Patch toggleTheme
+  const orig = window.toggleTheme;
+  window.toggleTheme = function(){
+    if(orig) orig();
+    swapCal();
+  };
 })();
 
 // ── FLICKERING GRID ──
@@ -1179,88 +1186,4 @@ function toggleTheme(){
     });
   },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
   els.forEach(el=>{
-    const isHot=el.classList.contains('hot');
-    el.style.opacity='0';
-    el.style.transform=isHot?'translateY(-8px)':'translateY(20px)';
-    el.style.transition='opacity .5s ease, transform .5s ease';
-    obs.observe(el);
-  });
-})();
-
-// ── CALENDAR ──
-(function(){
-  const months=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-  const slots=['09:00','09:30','10:00','10:30','11:00','11:30','14:00','14:30','15:00','15:30','16:00','16:30'];
-  let cur=new Date(),selectedDay=null,selectedSlot=null;
-  cur.setDate(1);
-
-  function render(){
-    const lbl=document.getElementById('monthLabel');
-    const grid=document.getElementById('calGrid');
-    if(!lbl||!grid)return;
-    lbl.textContent=months[cur.getMonth()]+' '+cur.getFullYear();
-    const first=new Date(cur.getFullYear(),cur.getMonth(),1);
-    const last=new Date(cur.getFullYear(),cur.getMonth()+1,0);
-    let startDay=(first.getDay()+6)%7; // Monday first
-    grid.innerHTML='';
-    const today=new Date();
-    for(let i=0;i<startDay;i++){
-      const e=document.createElement('button');
-      e.className='cal-day cal-day-empty';e.textContent='';grid.appendChild(e);
-    }
-    for(let d=1;d<=last.getDate();d++){
-      const e=document.createElement('button');
-      e.className='cal-day';e.textContent=d;
-      const date=new Date(cur.getFullYear(),cur.getMonth(),d);
-      const isToday=date.toDateString()===today.toDateString();
-      const isPast=date<new Date(today.setHours(0,0,0,0));
-      const isWeekend=date.getDay()===0||date.getDay()===6;
-      if(isPast||isWeekend){e.classList.add('cal-day-past')}
-      else{
-        e.classList.add('cal-day-available');
-        if(isToday)e.classList.add('cal-day-today');
-        if(selectedDay&&date.toDateString()===selectedDay.toDateString())e.classList.add('cal-day-selected');
-        e.addEventListener('click',()=>selectDay(date));
-      }
-      grid.appendChild(e);
-    }
-  }
-
-  function selectDay(date){
-    selectedDay=date;selectedSlot=null;render();
-    const title=document.getElementById('slotsTitle');
-    const sg=document.getElementById('slotsGrid');
-    const conf=document.getElementById('calConfirm');
-    const succ=document.getElementById('calSuccess');
-    if(!title||!sg)return;
-    const days=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
-    title.textContent=days[date.getDay()]+' '+date.getDate()+' de '+months[date.getMonth()];
-    sg.innerHTML='';conf.style.display='none';succ.style.display='none';
-    slots.forEach(s=>{
-      const b=document.createElement('button');
-      b.className='cal-slot';b.textContent=s;
-      b.addEventListener('click',()=>{
-        document.querySelectorAll('.cal-slot').forEach(x=>x.classList.remove('selected'));
-        b.classList.add('selected');selectedSlot=s;conf.style.display='flex';
-      });
-      sg.appendChild(b);
-    });
-  }
-
-  document.getElementById('prevMonth')?.addEventListener('click',()=>{cur.setMonth(cur.getMonth()-1);render()});
-  document.getElementById('nextMonth')?.addEventListener('click',()=>{cur.setMonth(cur.getMonth()+1);render()});
-  document.getElementById('bookBtn')?.addEventListener('click',()=>{
-    const name=document.getElementById('bookName')?.value;
-    const email=document.getElementById('bookEmail')?.value;
-    if(!name||!email){alert('Por favor completa tu nombre y email.');return;}
-    document.getElementById('calConfirm').style.display='none';
-    document.getElementById('slotsGrid').innerHTML='';
-    document.getElementById('calSuccess').style.display='flex';
-  });
-
-  render();
-})();
-
-</script>
-</body>
-</html>
+    const isHot=el.classList.
