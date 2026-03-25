@@ -356,241 +356,6 @@ footer{border-top:1px solid var(--b);background:var(--bg);padding:68px 56px 32px
 .abar-wrap{height:6px;background:var(--b2);border-radius:3px;overflow:hidden}
 .abar{height:100%;background:var(--g);border-radius:3px;animation:barGrow 1.5s ease forwards}
 @keyframes barGrow{from{width:0}to{width:97%}}
-
-/* ─── FEATURES V2 — uniform 3-col grid ─── */
-.feat-grid-v2{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
-  background:var(--b);border:1px solid var(--b);
-  border-radius:24px;overflow:hidden;
-}
-.fv2-card{
-  background:var(--s);padding:32px 28px 28px;
-  display:flex;flex-direction:column;gap:0;
-  transition:background .25s;cursor:default;position:relative;overflow:hidden;
-}
-.fv2-card::after{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,transparent,var(--g),transparent);
-  opacity:0;transition:opacity .3s;
-}
-.fv2-card:hover{background:var(--s2)}
-.fv2-card:hover::after{opacity:1}
-.fv2-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
-.fv2-num{font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:800;color:var(--t3);letter-spacing:.05em}
-.fv2-tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--g);background:var(--gdim);border:1px solid var(--gborder);padding:3px 10px;border-radius:100px}
-.fv2-ico{font-size:28px;margin-bottom:14px;width:48px;height:48px;background:linear-gradient(135deg,rgba(37,211,102,.1),rgba(37,211,102,.03));border:1px solid var(--gborder);border-radius:14px;display:flex;align-items:center;justify-content:center}
-.fv2-t{font-family:'Bricolage Grotesque',sans-serif;font-size:17px;font-weight:700;margin-bottom:10px;letter-spacing:-.2px;line-height:1.25}
-.fv2-d{font-size:13.5px;color:var(--t2);line-height:1.7;font-weight:300;flex:1;margin-bottom:20px}
-.fv2-stat{display:flex;align-items:baseline;gap:8px;padding-top:16px;border-top:1px solid var(--b)}
-.fv2-sn{font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:800;color:var(--g);letter-spacing:-1px}
-.fv2-sl{font-size:12px;color:var(--t3);font-weight:300}
-
-/* ─── HOW STEPS — graphique paso a paso ─── */
-.how-steps{display:flex;flex-direction:column;gap:0;margin-top:64px}
-.hstep{
-  display:grid;grid-template-columns:56px 1fr 1fr;gap:32px;
-  align-items:start;padding:0 0 56px;position:relative;
-}
-.hstep-alt .hstep-content{order:1}
-.hstep-alt .hstep-visual{order:0}
-.hstep-line-wrap{display:flex;flex-direction:column;align-items:center;padding-top:4px}
-.hstep-circle{
-  width:52px;height:52px;border-radius:50%;
-  background:var(--g);
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;position:relative;z-index:2;
-  box-shadow:0 0 0 6px rgba(37,211,102,.12);
-}
-.hstep-circle-2{background:linear-gradient(135deg,#1aab52,#25D366)}
-.hstep-circle-3{background:linear-gradient(135deg,#25D366,#4de88e)}
-.hstep-n{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:900;color:#000;letter-spacing:-.5px}
-.hstep-connector{
-  width:2px;flex:1;min-height:120px;
-  background:linear-gradient(to bottom,rgba(37,211,102,.4),rgba(37,211,102,.05));
-  margin-top:8px;
-}
-.hstep:last-child .hstep-connector{display:none}
-.hstep-content{padding-top:6px}
-.hstep-tag{font-size:11px;color:var(--g);text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:10px}
-.hstep-title{font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:12px}
-.hstep-desc{font-size:15px;color:var(--t2);line-height:1.75;font-weight:300;margin-bottom:16px}
-.hstep-chip{display:inline-flex;align-items:center;gap:7px;background:var(--s2);border:1px solid var(--b2);padding:7px 14px;border-radius:100px;font-size:13px;color:var(--t2);font-weight:400}
-/* Step visual — mini UI mockup */
-.hstep-visual{padding-top:6px}
-.hstep-screen{
-  background:var(--s);border:1px solid var(--b2);border-radius:16px;
-  overflow:hidden;box-shadow:0 20px 48px rgba(0,0,0,.35);
-}
-.hscreen-bar{
-  background:var(--s2);padding:10px 16px;display:flex;gap:6px;align-items:center;
-  border-bottom:1px solid var(--b);
-}
-.hscreen-bar span{width:10px;height:10px;border-radius:50%;background:var(--b2)}
-.hscreen-bar span:nth-child(1){background:rgba(255,95,87,.5)}
-.hscreen-bar span:nth-child(2){background:rgba(255,189,46,.5)}
-.hscreen-bar span:nth-child(3){background:rgba(40,200,64,.5)}
-.hscreen-body{padding:20px 20px}
-.hscreen-label{font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;font-weight:500}
-.hscreen-num{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:var(--t);letter-spacing:-.5px;margin-bottom:10px}
-.hscreen-status{display:inline-flex;align-items:center;gap:6px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);padding:4px 12px;border-radius:100px;font-size:12px;color:var(--g);font-weight:500}
-.hstatus-dot{width:6px;height:6px;background:var(--g);border-radius:50%;animation:pulse 2s infinite}
-.hscreen-msg{font-size:13px;color:var(--t2);line-height:1.6;font-style:italic;margin-bottom:14px;padding:10px;background:var(--s2);border-radius:8px;border:1px solid var(--b)}
-.hscreen-btn{display:inline-flex;align-items:center;gap:6px;background:var(--g);color:#000;padding:8px 16px;border-radius:100px;font-size:13px;font-weight:700;font-family:'Bricolage Grotesque',sans-serif}
-.hscreen-stats-row{display:flex;gap:20px;margin-bottom:14px}
-.hscreen-stat{}
-.hss-n{font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:800;color:var(--t);letter-spacing:-1px}
-.hss-l{font-size:11px;color:var(--t3);margin-top:2px}
-.hscreen-bar-row{height:4px;background:var(--b2);border-radius:2px;overflow:hidden}
-.hbr-fill{height:100%;background:var(--g);border-radius:2px;animation:barGrow 1.5s ease forwards}
-
-@media(max-width:900px){
-  .feat-grid-v2{grid-template-columns:1fr}
-  .how-steps .hstep{grid-template-columns:40px 1fr;gap:20px}
-  .hstep-visual{grid-column:2}
-}
-
-/* ─── LIGHT MODE ─── */
-html.light {
-  --g:#1a9e50;--gd:#147a3d;
-  --gdim:rgba(26,158,80,.10);--gborder:rgba(26,158,80,.22);
-  --bg:#f5f7f5;--bg2:#edf2ed;
-  --s:#ffffff;--s2:#f0f5f0;--s3:#e8f0e8;
-  --t:#0d1a0f;--t2:#3d6645;--t3:#7a9e80;
-  --b:rgba(0,0,0,.07);--b2:rgba(0,0,0,.12);
-}
-
-/* NAV in light */
-html.light nav{
-  background:rgba(245,247,245,.88);
-  border-bottom:1px solid rgba(0,0,0,.08);
-}
-html.light .ncta{background:var(--g);color:#fff}
-html.light .ncta:hover{background:var(--gd)}
-
-/* Logo text in light */
-html.light .logo-wrap text[fill="#ffffff"]{fill:#0d1a0f !important}
-html.light .logo-wrap text[fill="#dff0e1"]{fill:#0d1a0f !important}
-
-/* Hero in light */
-html.light .hero{background:var(--bg)}
-html.light #flickerCanvas{opacity:.12}
-html.light .hero-glow{background:radial-gradient(ellipse,rgba(26,158,80,.10) 0%,transparent 65%)}
-html.light .ripple{border-color:rgba(26,158,80,.10)}
-html.light .hero h1{color:var(--t)}
-html.light .hero-sub{color:var(--t2)}
-html.light .badge{background:rgba(26,158,80,.08);border-color:rgba(26,158,80,.2);color:var(--g)}
-
-/* Buttons in light */
-html.light .bg2{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.12);color:var(--t)}
-html.light .bg2:hover{border-color:var(--gborder);color:var(--g)}
-html.light .play{background:rgba(0,0,0,.1)}
-html.light .play::after{border-left-color:var(--t)}
-
-/* Beam visual in light */
-html.light .beam-center{
-  background:radial-gradient(circle,rgba(26,158,80,.06) 0%,var(--s) 65%);
-  border-color:var(--gborder);box-shadow:0 0 40px rgba(26,158,80,.08);
-}
-html.light .beam-ring{border-color:rgba(26,158,80,.08)}
-html.light .bchip{background:var(--s);border-color:var(--b)}
-
-/* Stats band in light */
-html.light .sband{background:var(--b);border-color:var(--b)}
-html.light .sc{background:var(--s)}
-html.light .sc:hover{background:var(--s2)}
-html.light .sl{color:var(--t3)}
-
-/* Logos in light */
-html.light .logos{background:var(--bg2);border-color:var(--b)}
-html.light .lpill{border-color:var(--b);color:var(--t3)}
-html.light .lpill:hover{border-color:var(--gborder);color:var(--t2)}
-
-/* Features in light */
-html.light .feat-grid-v2{background:var(--b);border-color:var(--b)}
-html.light .fv2-card{background:var(--s)}
-html.light .fv2-card:hover{background:var(--s2)}
-html.light .fv2-ico{background:linear-gradient(135deg,rgba(26,158,80,.08),rgba(26,158,80,.02))}
-
-/* How steps in light */
-html.light .how-bg{background:var(--bg2)}
-html.light .hstep-screen{background:var(--s);border-color:var(--b2);box-shadow:0 8px 32px rgba(0,0,0,.10)}
-html.light .hscreen-bar{background:var(--bg2);border-color:var(--b)}
-html.light .hscreen-msg{background:var(--bg2);border-color:var(--b)}
-html.light .hstep-chip{background:var(--s2);border-color:var(--b2);color:var(--t2)}
-html.light .hscreen-num{color:var(--t)}
-html.light .hss-n{color:var(--t)}
-
-/* Pricing in light */
-html.light .pcard{background:var(--s);border-color:var(--b)}
-html.light .pcard.hot{background:linear-gradient(160deg,#e8f5ee 0%,#f0faf4 100%);border-color:rgba(26,158,80,.35);box-shadow:0 0 40px rgba(26,158,80,.06)}
-html.light .pbtn-o{border-color:var(--b2);color:var(--t)}
-html.light .pbtn-o:hover{border-color:var(--gborder);color:var(--g)}
-
-/* Testimonials in light */
-html.light .tcard{background:var(--s);border-color:var(--b)}
-html.light .tcard:hover{border-color:var(--gborder)}
-html.light .tq{color:var(--t)}
-html.light .tmetric-wrap{background:rgba(26,158,80,.05);border-color:var(--gborder)}
-
-/* Apple infographic in light */
-html.light .atile-dark{background:var(--s);border-color:var(--b)}
-html.light .atile-surface{background:var(--s2);border-color:var(--b)}
-html.light .atile-green-dim{background:rgba(26,158,80,.07);border-color:var(--gborder)}
-html.light .atile-big-light{color:var(--t)}
-html.light .atile-sub{color:var(--t2) !important}
-html.light .alang{background:var(--s);border-color:var(--b2)}
-html.light .abar-wrap{background:var(--b2)}
-
-/* Calendar in light */
-html.light .cal-box{background:var(--s);border-color:var(--b2)}
-html.light .cal-header{border-color:var(--b)}
-html.light .cal-day{color:var(--t2)}
-html.light .cal-day.cal-day-available{color:var(--t)}
-html.light .cal-day:hover:not(.cal-day-empty):not(.cal-day-past){background:var(--s2);border-color:var(--gborder)}
-html.light .cal-nav-btn{border-color:var(--b);color:var(--t2)}
-html.light .cal-slot{background:var(--s);border-color:var(--b2);color:var(--t)}
-html.light .cal-input{background:var(--s2);border-color:var(--b2);color:var(--t)}
-html.light .cal-slots-title{color:var(--t2)}
-
-/* Footer in light */
-html.light footer{background:var(--bg);border-color:var(--b)}
-html.light .fbot{border-color:var(--b)}
-html.light .fslink{border-color:var(--b)}
-html.light .fcol a{color:var(--t3)}
-
-/* Final CTA in light */
-html.light .fcta{background:var(--bg)}
-html.light #ctaCanvas{opacity:.08}
-html.light .fcta-glow{background:radial-gradient(ellipse,rgba(26,158,80,.08) 0%,transparent 65%)}
-
-/* Toggle button */
-.theme-toggle{
-  width:38px;height:22px;border-radius:11px;
-  background:var(--s2);border:1px solid var(--b2);
-  cursor:pointer;position:relative;transition:all .3s;
-  flex-shrink:0;display:flex;align-items:center;padding:2px;
-}
-.theme-toggle-thumb{
-  width:16px;height:16px;border-radius:50%;
-  background:var(--g);transition:transform .3s;
-  display:flex;align-items:center;justify-content:center;
-  font-size:9px;
-}
-html.light .theme-toggle-thumb{transform:translateX(16px)}
-.theme-toggle-icon{font-size:10px;line-height:1}
-
-/* ─── CALENDLY WIDGET ─── */
-.calendly-wrap{
-  width:100%;max-width:900px;margin:0 auto;
-  position:relative;z-index:1;
-  border-radius:20px;overflow:hidden;
-  border:1px solid var(--gborder);
-  box-shadow:0 24px 64px rgba(0,0,0,.4);
-}
-html.light .calendly-wrap{
-  border-color:rgba(26,158,80,.2);
-  box-shadow:0 12px 40px rgba(0,0,0,.12);
-}
 </style>
 </head>
 <body>
@@ -621,14 +386,7 @@ html.light .calendly-wrap{
     <li><a href="#pricing">Precios</a></li>
     <li><a href="#contact">Contacto</a></li>
   </ul>
-  <div style="display:flex;align-items:center;gap:12px">
-    <button class="theme-toggle" id="themeToggle" title="Cambiar tema" onclick="toggleTheme()">
-      <div class="theme-toggle-thumb">
-        <span class="theme-toggle-icon" id="themeIcon">🌙</span>
-      </div>
-    </button>
-    <a href="#contact" class="ncta">Agendar demo</a>
-  </div>
+  <a href="#contact" class="ncta">Agendar demo</a><a href="dashboard.html" style="margin-left:8px;font-size:13px;font-weight:600;color:var(--t2);text-decoration:none" onmouseover="this.style.color='#25D366'" onmouseout="this.style.color=''">Acceder →</a>
 </nav>
 
 <!-- HERO -->
@@ -642,8 +400,8 @@ html.light .calendly-wrap{
   </div>
 
   <div class="badge"><span class="bpulse"></span>IA Voice Automation 24/7</div>
-  <h1 style="font-size:clamp(40px,5.2vw,68px)">Tu empresa,<br><em style="white-space:nowrap">siempre disponible.</em></h1>
-  <p class="hero-sub">Implementamos agentes de voz con inteligencia artificial que atienden, califican y convierten a tus clientes — las 24 horas, sin intervención humana.</p>
+  <h1>Tu competencia<br>cierra a las 6pm.<br>Tú, <em>nunca.</em></h1>
+  <p class="hero-sub">Ccentre AI atiende, vende y resuelve por teléfono — las 24 horas, los 7 días. Sin operadores. Sin errores. Sin límites.</p>
 
   <div class="ctas">
     <a href="#contact" class="bp">Agendar una demo</a>
@@ -700,7 +458,7 @@ html.light .calendly-wrap{
         <div class="feat-tag">⚡ Core</div>
         <div class="feat-ico-wrap">📞</div>
         <div class="feat-t">Llamadas automáticas 24/7</div>
-        <div class="feat-d">Atiende y realiza llamadas sin intervención humana. La IA comprende el contexto, responde con naturalidad y resuelve consultas al instante — en español, inglés o portugués.</div>
+        <div class="feat-d">Atiende y realiza llamadas sin intervención humana. La IA entiende el contexto, responde con naturalidad y resuelve consultas al instante — en español, inglés o portugués. Sin operadores. Sin esperas.</div>
         <div class="feat-stat">
           <div class="feat-stat-n">100%</div>
           <div class="feat-stat-l">de llamadas atendidas,<br>incluso a las 3am</div>
@@ -726,7 +484,7 @@ html.light .calendly-wrap{
         <div class="feat-tag">🔗 CRM</div>
         <div class="feat-ico-wrap">🔗</div>
         <div class="feat-t">Integración CRM nativa</div>
-        <div class="feat-d">Conecte su CRM en minutos. Cada llamada queda registrada automáticamente con transcripción, resumen y próximos pasos.</div>
+        <div class="feat-d">Conecta con tu CRM en minutos. Cada llamada se registra automáticamente con transcripción, resumen y próximos pasos.</div>
       </div>
 
       <!-- card 4 -->
@@ -735,7 +493,7 @@ html.light .calendly-wrap{
         <div class="feat-tag">🛡️ Security</div>
         <div class="feat-ico-wrap">🛡️</div>
         <div class="feat-t">Seguridad enterprise</div>
-        <div class="feat-d">Cifrado end-to-end, cumplimiento de normativas locales e internacionales. Sus datos siempre protegidos.</div>
+        <div class="feat-d">Cifrado end-to-end, cumplimiento de normativas locales e internacionales. Tus datos protegidos.</div>
       </div>
 
       <!-- card 5 — wide -->
@@ -744,7 +502,7 @@ html.light .calendly-wrap{
         <div class="feat-tag">🚀 Setup</div>
         <div class="feat-ico-wrap">⚡</div>
         <div class="feat-t">Configuración en 5 minutos — sin código</div>
-        <div class="feat-d">Conecte su número, defina la personalidad de su agente con lenguaje natural y lance. Sin equipo técnico. Sin complicaciones. Operativo el mismo día.</div>
+        <div class="feat-d">Conecta tu número, define la personalidad de tu agente con lenguaje natural y lanza. Sin equipo técnico. Sin complicaciones. Operativo el mismo día.</div>
         <div class="feat-stat">
           <div class="feat-stat-n">5 min</div>
           <div class="feat-stat-l">para estar operativo<br>sin técnicos</div>
@@ -759,87 +517,10 @@ html.light .calendly-wrap{
   <div class="wrap sec">
     <div class="stag">¿Cómo funciona?</div>
     <div class="sh">En marcha en<br><em style="color:var(--g)">48 horas</em></div>
-    <div class="how-steps">
-      <!-- Step 1 -->
-      <div class="hstep">
-        <div class="hstep-line-wrap">
-          <div class="hstep-circle">
-            <span class="hstep-n">01</span>
-          </div>
-          <div class="hstep-connector"></div>
-        </div>
-        <div class="hstep-content">
-          <div class="hstep-tag">Paso I</div>
-          <div class="hstep-title">Sesión de onboarding</div>
-          <div class="hstep-desc">30 minutos para entender tu negocio, tu cliente ideal, el tono de tu marca y los objetivos específicos que querés alcanzar.</div>
-          <div class="hstep-chip"><span>🎯</span> 30 minutos</div>
-        </div>
-        <div class="hstep-visual">
-          <div class="hstep-screen">
-            <div class="hscreen-bar"><span></span><span></span><span></span></div>
-            <div class="hscreen-body">
-              <div class="hscreen-label">Sesión programada</div>
-              <div class="hscreen-num">30 min · Onboarding</div>
-              <div class="hscreen-status"><span class="hstatus-dot"></span>Confirmado</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="hstep hstep-alt">
-        <div class="hstep-line-wrap">
-          <div class="hstep-circle hstep-circle-2">
-            <span class="hstep-n">02</span>
-          </div>
-          <div class="hstep-connector"></div>
-        </div>
-        <div class="hstep-content">
-          <div class="hstep-tag">Paso II</div>
-          <div class="hstep-title">Entrenamiento del agente</div>
-          <div class="hstep-desc">Entrenamos al agente con toda la información de tu empresa. Si querés clonar una voz, nos mandás 2 minutos de audio y lo hacemos nosotros.</div>
-          <div class="hstep-chip"><span>🎙️</span> Voz clonada incluida</div>
-        </div>
-        <div class="hstep-visual">
-          <div class="hstep-screen">
-            <div class="hscreen-bar"><span></span><span></span><span></span></div>
-            <div class="hscreen-body">
-              <div class="hscreen-label">Entrenamiento IA</div>
-              <div class="hscreen-msg">"Agente entrenado con tu marca, voz clonada lista, scripts configurados..."</div>
-              <div class="hscreen-btn">Agente listo ✓</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="hstep" style="--connector-display:none">
-        <div class="hstep-line-wrap">
-          <div class="hstep-circle hstep-circle-3">
-            <span class="hstep-n">03</span>
-          </div>
-        </div>
-        <div class="hstep-content">
-          <div class="hstep-tag">Paso III</div>
-          <div class="hstep-title">Integración completa</div>
-          <div class="hstep-desc">Conectamos el agente a tu número de teléfono, tu calendario y tu CRM. Sin cambiar nada de tu infraestructura actual.</div>
-          <div class="hstep-chip"><span>🔗</span> Sin cambiar tu infraestructura</div>
-        </div>
-        <div class="hstep-visual">
-          <div class="hstep-screen">
-            <div class="hscreen-bar"><span></span><span></span><span></span></div>
-            <div class="hscreen-body">
-              <div class="hscreen-stats-row">
-                <div class="hscreen-stat"><div class="hss-n">1,284</div><div class="hss-l">Llamadas hoy</div></div>
-                <div class="hscreen-stat"><div class="hss-n" style="color:var(--g)">97%</div><div class="hss-l">Satisfacción</div></div>
-              </div>
-              <div class="hscreen-bar-row">
-                <div class="hbr-fill" style="width:97%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="hgrid">
+      <div class="hcard"><div class="hnum">1</div><div class="hcirc">1</div><div class="ht">Conecta tu número</div><div class="hd">Vincula tu número existente o adquiere uno nuevo. Compatible con cualquier operadora de Paraguay y América Latina.</div></div>
+      <div class="hcard"><div class="hnum">2</div><div class="hcirc">2</div><div class="ht">Configura tu agente IA</div><div class="hd">Define la personalidad, el tono y los objetivos de tu agente con lenguaje natural. Sin código. Sin conocimientos técnicos.</div></div>
+      <div class="hcard"><div class="hnum">3</div><div class="hcirc">3</div><div class="ht">Lanza y escala</div><div class="hd">Tu centro de llamadas está listo. Monitorea en tiempo real y escala sin límites con tu negocio.</div></div>
     </div>
   </div>
 </div>
@@ -849,14 +530,14 @@ html.light .calendly-wrap{
 <section id="infographic" style="background:var(--bg);padding:108px 0">
   <div class="wrap">
     <div class="stag">Por qué Ccentre AI</div>
-    <div class="sh">Impacto<br>medible</div>
+    <div class="sh">Los números<br>hablan solos</div>
     <div class="apple-grid">
 
       <!-- Tile 1 — Large stat -->
       <div class="atile atile-green">
-        <div class="atile-label">Llamadas perdidas</div>
-        <div class="atile-big">0<span>%</span></div>
-        <div class="atile-sub">Cero llamadas perdidas, las 24 horas</div>
+        <div class="atile-label">Llamadas atendidas</div>
+        <div class="atile-big">100<span>%</span></div>
+        <div class="atile-sub">de tus llamadas, sin perder ninguna</div>
       </div>
 
       <!-- Tile 2 — Waveform visual -->
@@ -879,41 +560,41 @@ html.light .calendly-wrap{
       <!-- Tile 3 — Response time -->
       <div class="atile atile-dark">
         <div class="atile-label">Tiempo de respuesta</div>
-        <div class="atile-big-light">5<span style="font-size:.4em;color:var(--g)">seg</span></div>
-        <div class="atile-sub">Respuesta inmediata, más rápido que cualquier operador</div>
+        <div class="atile-big-light">&lt;1<span style="font-size:.4em;color:var(--t2)">seg</span></div>
+        <div class="atile-sub">Más rápido que cualquier operador humano</div>
       </div>
 
       <!-- Tile 4 — Cost reduction -->
       <div class="atile atile-dark">
-        <div class="atile-label">Satisfacción del cliente</div>
-        <div class="atile-big-accent">+40<span>%</span></div>
-        <div class="atile-sub">Aumento promedio en satisfacción tras implementar Ccentre AI</div>
+        <div class="atile-label">Reducción de costos</div>
+        <div class="atile-big-accent">−70<span>%</span></div>
+        <div class="atile-sub">Ahorro operativo desde el primer mes</div>
       </div>
 
       <!-- Tile 5 — Languages -->
       <div class="atile atile-surface atile-wide">
-        <div class="atile-label">Industrias</div>
+        <div class="atile-label">Multiidioma</div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0">
-          <span class="alang">🏠 Inmobiliarias</span>
-          <span class="alang">🏥 Clínicas</span>
-          <span class="alang">📣 Agencias</span>
-          <span class="alang">🎓 Educación</span>
+          <span class="alang">🇪🇸 Español</span>
+          <span class="alang">🇺🇸 English</span>
+          <span class="alang">🇧🇷 Português</span>
+          <span class="alang">🇫🇷 Français</span>
         </div>
-        <div class="atile-sub">Solución personalizada para cada industria</div>
+        <div class="atile-sub">Tu agente habla el idioma de tus clientes</div>
       </div>
 
       <!-- Tile 6 — Setup time -->
       <div class="atile atile-surface">
-        <div class="atile-label">Implementación</div>
-        <div class="atile-big-light">48<span style="font-size:.35em;color:var(--g)">h</span></div>
-        <div class="atile-sub">Tu agente en vivo en menos de 48 horas</div>
+        <div class="atile-label">Configuración</div>
+        <div class="atile-big-light">5<span style="font-size:.35em;color:var(--g)"> min</span></div>
+        <div class="atile-sub">Operativo el mismo día, sin equipo técnico</div>
       </div>
 
       <!-- Tile 7 — Simultaneous calls -->
       <div class="atile atile-green-dim">
-        <div class="atile-label">Disponibilidad</div>
-        <div class="atile-big-light">24<span style="font-size:.45em;color:var(--t2)">/7</span></div>
-        <div class="atile-sub">365 días al año, sin interrupciones</div>
+        <div class="atile-label">Llamadas simultáneas</div>
+        <div class="atile-big-light">∞</div>
+        <div class="atile-sub">Sin límite de llamadas en paralelo</div>
       </div>
 
       <!-- Tile 8 — Satisfaction -->
@@ -950,7 +631,7 @@ html.light .calendly-wrap{
           <li>500 llamadas/mes</li><li>1 agente IA</li>
           <li>Dashboard básico</li><li>Soporte email</li>
         </ul>
-        <a href="#" class="pbtn pbtn-o">Empezar gratis</a>
+        <a href="dashboard.html" class="pbtn pbtn-o">Empezar gratis</a>
       </div>
 
       <div class="pcard hot">
@@ -963,7 +644,7 @@ html.light .calendly-wrap{
           <li>5,000 llamadas/mes</li><li>5 agentes IA simultáneos</li>
           <li>Integración CRM + API</li><li>Reportes avanzados</li><li>Soporte 24/7</li>
         </ul>
-        <a href="#" class="pbtn pbtn-g">Empezar ahora</a>
+        <a href="dashboard.html" class="pbtn pbtn-g">Empezar ahora</a>
       </div>
 
       <div class="pcard">
@@ -989,7 +670,7 @@ html.light .calendly-wrap{
     <div class="tgrid">
 
       <div class="tcard">
-        <div class="tq">"Ccentre AI transformó nuestra atención al cliente. Pasamos de perder el 40% de las llamadas a atender el 100%, incluso a las 3am. Nuestros clientes no creen que hablan con una IA."</div>
+        <div class="tq">"Ccentre AI transformó completamente nuestra atención al cliente. Pasamos de perder el 40% de las llamadas a atender el 100%, incluso a las 3am. Nuestros clientes no creen que hablan con una IA."</div>
         <div class="tauth">
           <div class="tav">MG</div>
           <div><div class="tnm">María González</div><div class="trl">CEO, FinanzaPY</div></div>
@@ -1004,7 +685,7 @@ html.light .calendly-wrap{
       </div>
 
       <div class="tcard">
-        <div class="tq">"Implementamos Ccentre AI en 48 horas. Gestionamos 3x más llamadas con mejor calidad y redujimos los costos operativos en un 70% el primer mes."</div>
+        <div class="tq">"Implementamos Ccentre AI en 48 horas. Ahora manejamos 3x más llamadas con mejor calidad. Redujimos los costos del call center en un 70% el primer mes. ROI increíble."</div>
         <div class="tauth">
           <div class="tav">RL</div>
           <div><div class="tnm">Roberto López</div><div class="trl">Dir. Operaciones, RetailPro</div></div>
@@ -1022,34 +703,73 @@ html.light .calendly-wrap{
   </div>
 </div>
 
-<!-- FINAL CTA + CALENDLY -->
+<!-- FINAL CTA + CALENDAR -->
 <section class="fcta" id="contact">
   <canvas id="ctaCanvas"></canvas>
   <div class="fcta-vignette"></div>
   <div class="fcta-glow"></div>
+  <div class="stag" style="position:relative;z-index:1;margin-bottom:12px">Reserva una demo</div>
+  <h2 style="position:relative;z-index:1">¿Listo para automatizar<br>tu centro de llamadas?</h2>
+  <p style="position:relative;z-index:1">Reserva una llamada de 20 minutos con nuestro equipo. Te mostramos todo en vivo.</p>
 
-  <div class="stag" style="position:relative;z-index:1;margin-bottom:12px">Contacto</div>
-  <h2 style="position:relative;z-index:1">Hablemos de<br>tu negocio</h2>
-  <p style="position:relative;z-index:1;margin-bottom:48px">Contanos tu empresa y tu desafío. Te contactamos en menos de 24 horas para mostrarte exactamente cómo Ccentre AI puede transformar tu atención al cliente.</p>
+  <div class="cal-wrap">
+    <!-- Calendar UI -->
+    <div class="cal-box">
+      <div class="cal-header">
+        <div class="cal-meta">
+          <div class="cal-ico">📞</div>
+          <div>
+            <div class="cal-title">Demo Ccentre AI</div>
+            <div class="cal-sub">20 min · Videollamada gratuita</div>
+          </div>
+        </div>
+      </div>
+      <div class="cal-body">
+        <!-- Month nav -->
+        <div class="cal-month-nav">
+          <button class="cal-nav-btn" id="prevMonth">‹</button>
+          <span class="cal-month-label" id="monthLabel"></span>
+          <button class="cal-nav-btn" id="nextMonth">›</button>
+        </div>
+        <!-- Days grid -->
+        <div class="cal-days-header">
+          <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sa</span><span>Do</span>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+      </div>
+    </div>
 
-  <!-- Calendly — deux iframes dark/light -->
-  <div class="calendly-wrap">
-    <iframe
-      id="cal-dark"
-      src="https://calendly.com/ccentrepy/30min?locale=es&lang=es&hide_event_type_details=1&hide_gdpr_banner=1&background_color=0c1510&text_color=dff0e1&primary_color=25D366"
-      width="100%" height="700" frameborder="0"
-      style="border-radius:16px;border:none;display:block">
-    </iframe>
-    <iframe
-      id="cal-light"
-      src="https://calendly.com/ccentrepy/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=f5f7f5&text_color=0d1a0f&primary_color=1a9e50"
-      width="100%" height="700" frameborder="0"
-      style="border-radius:16px;border:none;display:none">
-    </iframe>
+    <!-- Time slots -->
+    <div class="cal-slots" id="calSlots">
+      <div class="cal-slots-title" id="slotsTitle">Selecciona un día</div>
+      <div class="cal-slots-grid" id="slotsGrid"></div>
+      <div class="cal-confirm" id="calConfirm" style="display:none">
+        <input type="text" class="cal-input" placeholder="Tu nombre" id="bookName"/>
+        <input type="email" class="cal-input" placeholder="Email empresarial" id="bookEmail"/>
+        <input type="tel" class="cal-input" placeholder="WhatsApp / Teléfono" id="bookPhone"/>
+        <button class="cal-book-btn" id="bookBtn">Confirmar reserva →</button>
+      </div>
+      <div class="cal-success" id="calSuccess" style="display:none">
+        <div class="cal-success-ico">✓</div>
+        <div class="cal-success-title">¡Reserva confirmada!</div>
+        <div class="cal-success-sub">Te enviaremos los detalles por email.</div>
+      </div>
+    </div>
   </div>
 
-  <div style="margin-top:48px;position:relative;z-index:1">
-    <a href="/cdn-cgi/l/email-protection#ec8483808dac8f8f8982989e89c28d85" class="bp">Escribinos a <span class="__cf_email__" data-cfemail="2d4542414c6d4e4e4843595f48034c44">[email&#160;protected]</span> →</a>
+  <div style="margin-top:40px;position:relative;z-index:1">
+    <a href="#" class="bp">O empieza gratis ahora →</a>
+  </div>
+
+  <!-- Calendly -->
+  <div style="width:100%;max-width:900px;margin:32px auto 0;border-radius:20px;overflow:hidden;border:1px solid rgba(37,211,102,.2);box-shadow:0 24px 64px rgba(0,0,0,.4)">
+    <div class="calendly-inline-widget"
+      data-url="https://calendly.com/ccentrepy/30min?locale=es&hide_event_type_details=1&hide_gdpr_banner=1&background_color=0c1510&text_color=dff0e1&primary_color=25D366"
+      style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </div>
+  <div style="margin-top:32px;position:relative;z-index:1">
+    <a href="mailto:hola@ccentre.ai" class="bp">O escríbenos a hola@ccentre.ai →</a>
   </div>
 </section>
 
@@ -1058,7 +778,7 @@ html.light .calendly-wrap{
   <div class="fgrid">
     <div class="fbrand">
       <a href="#" class="logo-wrap" style="display:inline-flex;align-items:center;text-decoration:none"><svg width="155" height="36" viewBox="0 0 155 36" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="27" font-family="Bricolage Grotesque,sans-serif" font-size="32" font-weight="900" fill="#25D366" letter-spacing="-2">C</text><rect x="4" y="15" width="2" height="6" rx="1" fill="#fff" opacity=".5"/><rect x="8" y="11" width="2" height="14" rx="1" fill="#fff" opacity=".85"/><rect x="12" y="13" width="2" height="10" rx="1" fill="#fff" opacity=".7"/><rect x="16" y="9" width="2" height="18" rx="1" fill="#fff"/><rect x="20" y="12" width="2" height="12" rx="1" fill="#fff" opacity=".75"/><rect x="24" y="15" width="2" height="6" rx="1" fill="#fff" opacity=".5"/><text x="30" y="27" font-family="Bricolage Grotesque,sans-serif" font-size="20" font-weight="800" fill="#ffffff" letter-spacing="1.5">CENTRE</text><rect x="116" y="10" width="28" height="16" rx="5" fill="#25D366"/><text x="130" y="22" font-family="Bricolage Grotesque,sans-serif" font-size="11" font-weight="800" fill="#000" text-anchor="middle">AI</text></svg></a>
-      <p>La voz inteligente de su empresa. Automatización de llamadas con IA, disponible 24/7 sin interrupciones.</p>
+      <p>La voz inteligente de tu empresa. Automatización de llamadas con IA, disponible 24/7 sin interrupciones.</p>
     </div>
     <div class="fcol">
       <h4>Producto</h4>
@@ -1066,7 +786,7 @@ html.light .calendly-wrap{
     </div>
     <div class="fcol">
       <h4>Empresa</h4>
-      <ul><li><a href="#">Sobre nosotros</a></li><li><a href="#">Blog</a></li><li><a href="#">Contacto</a></li><li><a href="#">Careers</a></li></ul>
+      <ul><li><a href="#">Sobre nosotros</a></li><li><a href="#">Blog</a></li><li><a href="#contact">Contacto</a></li><li><a href="dashboard.html">Acceder al dashboard</a></li></ul>
     </div>
     <div class="fcol">
       <h4>Legal</h4>
@@ -1083,54 +803,7 @@ html.light .calendly-wrap{
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
-// ── THEME TOGGLE ──
-function toggleTheme(){
-  const html = document.documentElement;
-  const icon = document.getElementById('themeIcon');
-  if(html.classList.contains('light')){
-    html.classList.remove('light');
-    icon.textContent = '🌙';
-    localStorage.setItem('ccentre-theme','dark');
-  } else {
-    html.classList.add('light');
-    icon.textContent = '☀️';
-    localStorage.setItem('ccentre-theme','light');
-  }
-}
-// Init from saved preference
-(function(){
-  const saved = localStorage.getItem('ccentre-theme');
-  if(saved === 'light'){
-    document.documentElement.classList.add('light');
-    const icon = document.getElementById('themeIcon');
-    if(icon) icon.textContent = '☀️';
-  }
-})();
-
-
-
-// ── CALENDLY IFRAME SWAP ──
-(function(){
-  function swapCal(){
-    const isLight = document.documentElement.classList.contains('light');
-    const dark  = document.getElementById('cal-dark');
-    const light = document.getElementById('cal-light');
-    if(!dark || !light) return;
-    dark.style.display  = isLight ? 'none'  : 'block';
-    light.style.display = isLight ? 'block' : 'none';
-  }
-  // Init au chargement
-  document.addEventListener('DOMContentLoaded', swapCal);
-  // Patch toggleTheme
-  const orig = window.toggleTheme;
-  window.toggleTheme = function(){
-    if(orig) orig();
-    swapCal();
-  };
-})();
-
+<script>
 // ── FLICKERING GRID ──
 (function(){
   const c=document.getElementById('flickerCanvas'),ctx=c.getContext('2d');
@@ -1186,4 +859,88 @@ function toggleTheme(){
     });
   },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
   els.forEach(el=>{
-    const isHot=el.classList.
+    const isHot=el.classList.contains('hot');
+    el.style.opacity='0';
+    el.style.transform=isHot?'translateY(-8px)':'translateY(20px)';
+    el.style.transition='opacity .5s ease, transform .5s ease';
+    obs.observe(el);
+  });
+})();
+
+// ── CALENDAR ──
+(function(){
+  const months=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const slots=['09:00','09:30','10:00','10:30','11:00','11:30','14:00','14:30','15:00','15:30','16:00','16:30'];
+  let cur=new Date(),selectedDay=null,selectedSlot=null;
+  cur.setDate(1);
+
+  function render(){
+    const lbl=document.getElementById('monthLabel');
+    const grid=document.getElementById('calGrid');
+    if(!lbl||!grid)return;
+    lbl.textContent=months[cur.getMonth()]+' '+cur.getFullYear();
+    const first=new Date(cur.getFullYear(),cur.getMonth(),1);
+    const last=new Date(cur.getFullYear(),cur.getMonth()+1,0);
+    let startDay=(first.getDay()+6)%7; // Monday first
+    grid.innerHTML='';
+    const today=new Date();
+    for(let i=0;i<startDay;i++){
+      const e=document.createElement('button');
+      e.className='cal-day cal-day-empty';e.textContent='';grid.appendChild(e);
+    }
+    for(let d=1;d<=last.getDate();d++){
+      const e=document.createElement('button');
+      e.className='cal-day';e.textContent=d;
+      const date=new Date(cur.getFullYear(),cur.getMonth(),d);
+      const isToday=date.toDateString()===today.toDateString();
+      const isPast=date<new Date(today.setHours(0,0,0,0));
+      const isWeekend=date.getDay()===0||date.getDay()===6;
+      if(isPast||isWeekend){e.classList.add('cal-day-past')}
+      else{
+        e.classList.add('cal-day-available');
+        if(isToday)e.classList.add('cal-day-today');
+        if(selectedDay&&date.toDateString()===selectedDay.toDateString())e.classList.add('cal-day-selected');
+        e.addEventListener('click',()=>selectDay(date));
+      }
+      grid.appendChild(e);
+    }
+  }
+
+  function selectDay(date){
+    selectedDay=date;selectedSlot=null;render();
+    const title=document.getElementById('slotsTitle');
+    const sg=document.getElementById('slotsGrid');
+    const conf=document.getElementById('calConfirm');
+    const succ=document.getElementById('calSuccess');
+    if(!title||!sg)return;
+    const days=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+    title.textContent=days[date.getDay()]+' '+date.getDate()+' de '+months[date.getMonth()];
+    sg.innerHTML='';conf.style.display='none';succ.style.display='none';
+    slots.forEach(s=>{
+      const b=document.createElement('button');
+      b.className='cal-slot';b.textContent=s;
+      b.addEventListener('click',()=>{
+        document.querySelectorAll('.cal-slot').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');selectedSlot=s;conf.style.display='flex';
+      });
+      sg.appendChild(b);
+    });
+  }
+
+  document.getElementById('prevMonth')?.addEventListener('click',()=>{cur.setMonth(cur.getMonth()-1);render()});
+  document.getElementById('nextMonth')?.addEventListener('click',()=>{cur.setMonth(cur.getMonth()+1);render()});
+  document.getElementById('bookBtn')?.addEventListener('click',()=>{
+    const name=document.getElementById('bookName')?.value;
+    const email=document.getElementById('bookEmail')?.value;
+    if(!name||!email){alert('Por favor completa tu nombre y email.');return;}
+    document.getElementById('calConfirm').style.display='none';
+    document.getElementById('slotsGrid').innerHTML='';
+    document.getElementById('calSuccess').style.display='flex';
+  });
+
+  render();
+})();
+
+</script>
+</body>
+</html>
